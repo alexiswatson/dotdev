@@ -1,0 +1,31 @@
+.masthead {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 1fr; 
+  margin: 0;
+  padding: 0;
+  background: #130718;
+  border-bottom: #e69c28 4px double;
+}
+
+.masthead-logo {
+  justify-self: center;
+  align-self: center;
+}
+
+.masthead-nav {
+  width: 100%;
+  justify-self: center;
+  align-self: center;
+}
+
+@media screen and (min-width: 760px) {
+  .masthead {
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .masthead-logo {
+    justify-self: baseline;
+  }
+}

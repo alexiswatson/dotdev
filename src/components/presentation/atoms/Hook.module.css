@@ -1,0 +1,4 @@
+.hook {
+  composes: heading-3 from '../../../shared/styles/typography.module.css';
+  composes: white from '../../../shared/styles/colors.module.css';
+}

@@ -1,0 +1,12 @@
+.social-nav-list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.social-nav-list-item {
+  margin: 0.5rem;
+}

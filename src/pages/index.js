@@ -1,21 +1,131 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { Component } from 'react';
+import { graphql } from "gatsby"
+import FullSection from '../components/presentation/organisms/FullSection';
+import CTASection from '../components/presentation/organisms/CTASection';
+import ParagraphSection from '../components/presentation/organisms/ParagraphSection';
+import LogoSetSection from '../components/presentation/organisms/LogoSetSection';
+import Page from '../components/presentation/templates/Page';
 
-import Layout from "../components/layout"
-import Image from "../components/image"
-import SEO from "../components/seo"
+export const query = graphql`
+{
+  prismic {
+    allHome_pages(first: 1) {
+      edges {
+        node {
+          title
+          lede
+          hook
+          hero_image
+          logos {
+            logo
+          }
+          _linkType
+          body {
+            ... on PRISMIC_Home_pageBodyParagraph {
+              primary {
+                paragraph_title
+                paragraph_copy
+              }
+              type
+            }
+            ... on PRISMIC_Home_pageBodyLogo_set {
+              fields {
+                logo_set_logo_link {
+                  ... on PRISMIC__ExternalLink {
+                    url
+                  }
+                  ... on PRISMIC__ImageLink {
+                    name
+                    url
+                    size
+                  }
+                  ... on PRISMIC__FileLink {
+                    name
+                    url
+                    size
+                  }
+                  ... on PRISMIC_Page {
+                    _meta {
+                      uid
+                    }
+                  }
+                  __typename
+                }
+                logo_set_logo_image1
+              }
+              type
+            }
+            ... on PRISMIC_Home_pageBodyCta {
+              primary {
+                cta_title
+                cta_hook
+                cta_prompt
+                cta_link_url {
+                  ... on PRISMIC__ExternalLink {
+                    url
+                  }
+                  ... on PRISMIC__ImageLink {
+                    name
+                    url
+                    size
+                  }
+                  ... on PRISMIC__FileLink {
+                    name
+                    url
+                    size
+                  }
+                  ... on PRISMIC_Page {
+                    _meta {
+                      uid
+                    }
+                  }
+                  __typename
+                  __typename
+                }
+                cta_link_text
+              }
+              type
+            }
+            __typename
+          }
+        }
+      }
+    }
+  }
+}
+`;
 
-const IndexPage = () => (
-  <Layout>
-    <SEO title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <div style={{ maxWidth: `300px`, marginBottom: `1.45rem` }}>
-      <Image />
-    </div>
-    <Link to="/page-2/">Go to page 2</Link>
-  </Layout>
-)
+export default class HomeContainer extends Component {
+    render() {
+        const doc = this.props.data.prismic.allHome_pages.edges[0].node;
+        const { title, lede, hook, hero_image, logos, body } = doc;
+        // @TODO: Factor strategies out.
+        const paragraphStrategy = (section) => (
+          (section.type === 'paragraph') ? <ParagraphSection title={section.primary.paragraph_title} paragraphs={section.primary.paragraph_copy} /> : null
+        );
+        const ctaStrategy = (section) => (
+          (section.type === 'cta') ? <CTASection title={section.primary.cta_title} hook={section.primary.cta_hook} prompt={section.primary.cta_prompt} cta={section.primary.cta_link_text} to={section.primary.cta_link_url} />  : null
+        );
+        const logosetStrategy = (section) => (
+          (section.type === 'logo_set') ? <LogoSetSection logos={section.fields} /> : null
+        );
+        const sectionStrategies = {
+          'cta': ctaStrategy,
+          'logo_set': logosetStrategy,
+          'paragraph': paragraphStrategy
+        }
 
-export default IndexPage
+        return (
+            <Page>
+                <FullSection 
+                  heading={title[0].text}
+                  subhead={lede[0].text}
+                  photo={hero_image}
+                  logos={logos}
+                  hook={hook} 
+                />
+                {body.map(section => (sectionStrategies[section.type](section)))} 
+            </Page>
+        );
+    }
+}

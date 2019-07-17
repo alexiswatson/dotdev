@@ -1,0 +1,21 @@
+.link {
+  color: #65cbe5;
+  text-decoration: none;
+  border-bottom: 1px dotted #65cbe5;
+}
+
+.link:hover {
+  color: #65cbe5;
+  border-bottom: 1px solid #65cbe5;
+}
+
+.link:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.link:visited {
+  color: #ff43a4;
+  border-bottom: 1px dotted #ff43a4;
+}

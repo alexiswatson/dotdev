@@ -1,0 +1,12 @@
+.heading {
+  composes: heading-1 from '../../../shared/styles/typography.module.css'; 
+  composes: hotpink from '../../../shared/styles/colors.module.css';
+}
+
+.heading.no-top-margin {
+  margin-top: 0;
+}
+
+.heading.no-bottom-margin {
+  margin-bottom: 0;
+}

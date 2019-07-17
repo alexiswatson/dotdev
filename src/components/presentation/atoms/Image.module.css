@@ -1,0 +1,13 @@
+.image {
+  width: 100%;
+  height: auto;
+  vertical-align: bottom;
+}
+
+.image.float-left {
+  float: left;
+}
+
+.image.float-right {
+  float: right;
+}

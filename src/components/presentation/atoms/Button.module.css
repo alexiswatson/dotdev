@@ -1,0 +1,15 @@
+.button {
+  composes: callout from '../../../shared/styles/typography.module.css';
+  composes: cyan from '../../../shared/styles/colors.module.css';
+  font-size: 1.5rem;
+  border: 1px #65cbe5 solid;
+  padding: 1rem 2rem;
+  background: transparent;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.submit {
+  display: block;
+  margin: 2rem auto;
+}

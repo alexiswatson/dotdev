@@ -1,0 +1,13 @@
+.label {
+  composes: copy from '../../../shared/styles/typography.module.css';
+  font-weight: bold;
+  composes: white from '../../../shared/styles/colors.module.css';
+}
+
+.sro {
+  composes: sro from '../../../shared/styles/accessibility.module.css';
+}
+
+.label .required-star {
+  color: #ff43a4;
+}

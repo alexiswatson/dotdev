@@ -1,0 +1,29 @@
+.works {
+  box-sizing: border-box;
+  composes: max-800 from '../../../shared/styles/typography.module.css';
+  columns: 2 20rem;
+  column-gap: 2rem;
+  list-style-type: none;
+  padding: 0;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.works-item {
+  box-sizing: border-box;
+  margin: 0 0 2rem;
+  padding: 2rem;
+  background: #0a0a0a;
+  text-align: center;
+  break-inside: avoid-column;
+}
+
+.works-link {
+  display: block;
+  text-decoration: none;
+  composes: grow from '../../../shared/styles/animation.module.css';
+}
+
+.works-link:hover {
+  transform: scale(1.05);
+}

@@ -1,0 +1,20 @@
+.form-container {
+  background: #222222;
+}
+
+.form {
+  composes: max-800 from '../../../shared/styles/typography.module.css';
+}
+
+.form-header {
+  text-align: center;
+}
+
+.form-body {
+  composes: max-600 from '../../../shared/styles/typography.module.css';
+}
+
+.form-title {
+  composes: heading-1 from '../../../shared/styles/typography.module.css';
+  composes: hotpink from '../../../shared/styles/colors.module.css';
+}

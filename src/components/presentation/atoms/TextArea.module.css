@@ -1,0 +1,10 @@
+.textarea {
+  box-sizing: border-box;
+  composes: copy from '../../../shared/styles/typography.module.css';
+  width: 100%;
+  font-size: 1.5rem;
+  height: 13rem;
+  padding: .5rem 1rem .75rem;
+  margin: 0;
+  border: 0;
+}

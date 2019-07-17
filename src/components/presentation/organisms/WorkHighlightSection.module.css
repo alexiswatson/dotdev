@@ -1,0 +1,87 @@
+.section {
+  position: relative;
+}
+
+.details-grid {
+  line-height: 1;
+}
+
+.date {
+  font-style: italic;
+}
+
+.details-grid {
+  padding: 2rem;
+  background: #222222;
+  margin: 0;
+}
+
+.details-head {
+  margin-bottom: 3rem;
+}
+
+
+@media only screen and (min-width: 850px) {
+  .details-grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    display: grid;
+    padding: 0;
+    background-color: transparent;
+    background-image: linear-gradient(to bottom, rgba(0,0,0,.4) 0%, rgba(0,0,0,.6) 10%, rgba(0,0,0,.85) 30%); 
+    border-bottom: #e69c28 4px double;
+  }
+
+  .details-cell {
+    align-self: end;
+    padding: 1rem 2rem;
+  }
+}
+
+
+@media only screen and (min-width: 920px) {
+  .section {
+    position: relative;
+  }
+
+  .details-grid {
+    composes: copy from '../../../shared/styles/typography.module.css';
+    display: grid;
+    grid-template-rows: auto;
+    grid-template-columns: 50% 50%;
+    justify-content: center;
+    align-items: center;
+    color: #eeeeee;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    background-color: transparent;
+    background-image: linear-gradient(to right, rgba(0,0,0,.4) 0%, rgba(0,0,0,.6) 10%, rgba(0,0,0,.85) 30%);
+    border-bottom: #e69c28 4px double;
+    line-height: 1;
+  }
+
+  .details-cell {
+    display: block;
+    grid-row-start: 1;
+    grid-row-end: span 1;
+    grid-column-start: 2;
+    grid-column-end: span 1;
+    padding: 2rem;
+  }
+
+  .details-hook {
+    max-width: 400px;
+  }
+
+  .hero {
+    height: 500px;
+    overflow: hidden;
+  }
+}

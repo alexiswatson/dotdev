@@ -1,0 +1,56 @@
+.statistic.up .figure, .statistic.down .figure {
+  padding-left: 3rem;
+}
+
+.statistic.up .figure::before, .statistic.down .figure::before {
+  content: '';
+  display: block;
+  width: 0;
+  height: 0;
+  position: absolute;
+  top: -0.25rem;
+  left: 0;
+  z-index: -1;
+  border-style: solid;
+}
+
+.statistic.up .figure::before {
+  border-width: 0 2rem 4rem 2rem;
+  border-color: transparent transparent #0ff transparent;
+}
+
+.statistic.down .figure::before {
+  border-width: 4rem 2rem 0 2rem;
+  border-color: #0ff transparent transparent transparent;
+}
+
+.figure-wrapper {
+  text-align: center;
+}
+
+.figure {
+  display: inline-block;
+  position: relative;
+  composes: heading-1 from '../../../shared/styles/typography.module.css';
+  composes: hotpink from '../../../shared/styles/colors.module.css';
+  z-index: 2;
+  margin-top: 0;
+}
+
+.details {
+  display: block;
+  composes: callout from '../../../shared/styles/typography.module.css';
+  composes: hotpink from '../../../shared/styles/colors.module.css';
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.statistic.date {
+
+}
+
+.statistic.date .image {
+  margin: 0 auto 2rem;
+  color: #65cbe5;
+  max-width:65%;
+}

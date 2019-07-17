@@ -1,0 +1,8 @@
+.paragraph {
+  composes: copy from '../../../shared/styles/typography.module.css';
+  composes: white from '../../../shared/styles/colors.module.css'
+}
+
+.small {
+  font-size: 1.25rem;
+}

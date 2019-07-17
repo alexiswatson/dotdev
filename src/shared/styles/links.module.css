@@ -1,0 +1,20 @@
+.link {
+  composes: cyan from './colors.module.css';
+  text-decoration: none;
+  border-bottom: 1px dotted #65cbe5;
+}
+
+.link:hover {
+  border-bottom: 1px solid #65cbe5;
+}
+
+.link:active {
+  position: relative;
+  top: 2px;
+  left: 2px;
+}
+
+.link:visited {
+  composes: hotpink from './colors.module.css';
+  border-bottom: 1px dotted #ff43a4;
+}

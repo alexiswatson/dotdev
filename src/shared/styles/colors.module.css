@@ -1,0 +1,53 @@
+/* @TODO: Convert to proper variables */
+
+.white {
+  color: #efefef;
+}
+
+.grey {
+  color: #222222;
+}
+
+.cyan {
+  color: #65cbe5;
+}
+
+.hotpink {
+  color: #ff43a4;
+}
+
+.sunset {
+  color: #e69c28;
+}
+
+.dusk {
+  color: #260e30;
+}
+
+.black {
+  color: #0a0a0a;
+}
+
+.bg-white {
+  background: #efefef;
+}
+
+.bg-cyan {
+  background: #65cbe5;
+}
+
+.bg-hotpink {
+  background: #ff43a4;
+}
+
+.bg-sunset {
+  background: #e69c28;
+}
+
+.bg-dusk {
+  background: #260e30;
+}
+
+.bg-black {
+  background: #0a0a0a;
+}

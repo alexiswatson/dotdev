@@ -1,0 +1,22 @@
+.cta {
+  text-align: center;
+  background: #222222;
+}
+
+.cta-inner {
+  composes: max-800 from '../../../shared/styles/typography.module.css'; 
+}
+
+.cta-button {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.title {
+  composes: heading-1 from '../../../shared/styles/typography.module.css';
+  composes: hotpink from '../../../shared/styles/colors.module.css';
+}
+.prompt {
+  composes: heading-2 from '../../../shared/styles/typography.module.css';
+  composes: cyan from '../../../shared/styles/colors.module.css';
+}

@@ -1,0 +1,68 @@
+.gill-sans-nova {
+  font-family: gill-sans-nova, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.kallisto-lined {
+  font-family: kallisto-lined, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.lo-res-9-plus-wide {
+  font-family: lores-9-plus-wide, sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.copy {
+  composes: gill-sans-nova;
+  font-size: 1.5rem;
+  line-height: 1.6;
+  letter-spacing: 0.02rem;
+  margin: 1rem 0;
+}
+
+.heading-1 {
+  composes: kallisto-lined;
+  font-size: 3rem;
+  margin: 2rem 0 1rem;
+}
+
+.heading-2 {
+  composes: gill-sans-nova;
+  font-weight: 700;
+  font-size: 2rem;
+  margin: 1rem 0 1rem;
+}
+
+.heading-3 {
+  composes: gill-sans-nova;
+  font-style: italic;
+  font-size: 1.5rem;
+  margin: 1rem 0;
+}
+
+.callout {
+  composes: lo-res-9-plus-wide;
+  font-size: 1.25rem;
+}
+
+.max-800 {
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  max-width: 800px;
+}
+
+.max-600 {
+  margin: 0 auto;
+  padding: 0.5rem 2rem;
+  max-width: 600px;
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}

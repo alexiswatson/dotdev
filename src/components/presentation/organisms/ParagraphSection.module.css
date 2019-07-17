@@ -1,0 +1,3 @@
+.paragraph {
+  composes: max-800 from '../../../shared/styles/typography.module.css';
+}

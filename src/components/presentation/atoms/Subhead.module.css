@@ -1,0 +1,8 @@
+.subhead {
+  composes: heading-2 from '../../../shared/styles/typography.module.css';
+  composes: cyan from '../../../shared/styles/colors.module.css';
+}
+
+.subhead.no-top-margin {
+  margin-top: 0;
+}

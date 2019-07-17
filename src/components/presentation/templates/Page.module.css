@@ -1,0 +1,33 @@
+.page {
+  composes: bg-dusk from '../../../shared/styles/colors.module.css';
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  grid-template-columns: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.page-masthead, .page-main, .page-colophon {
+  grid-column: 1;
+}
+
+.page-masthead {
+  grid-row: 1 / 2;
+}
+
+.page-main {
+  grid-row: 2 / 3;
+}
+
+.page-colophon {
+  grid-row: 3 / 4;
+}
+
+.page-heading {
+  composes: max-800 from '../../../shared/styles/typography.module.css';
+}
+
+.page .page-heading {
+  padding-bottom: 0;
+}
