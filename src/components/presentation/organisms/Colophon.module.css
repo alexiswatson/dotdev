@@ -10,9 +10,14 @@
   border-bottom: #333 1px solid;
 }
 
+
 .colophon-logo, .colophon-nav, .colophon-certs {
   justify-self: center;
   align-self: center;
+}
+
+.colophon-logo {
+  width: 100%;
 }
 
 .colophon-iaap-logo {
