@@ -44,6 +44,7 @@ export const query = graphql`
                     ... on PRISMIC_Page {
                       _linkType
                       _meta {
+                        id
                         uid
                       }
                     }
@@ -97,7 +98,6 @@ export default class WorkContainer extends Component {
     render() {
         const doc = this.props.data.prismic.allWorks.edges[0].node;
         const { title, organization, year, lede, hook, hero_image, body } = doc;
-        console.log(body);
 
         // @TODO: Factor strategies out.
         const paragraphStrategy = (section) => (

@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './CTASection.module.css';
 import { ButtonLink } from '../atoms/Button';
 import Paragraph from '../atoms/Paragraph';
+import PrismicLinkURL from '../../../shared/js/PrismicLinkURL';
 
 export default function CTASection({title, hook, prompt, cta, to, ...props}) {
   return (
@@ -13,7 +14,7 @@ export default function CTASection({title, hook, prompt, cta, to, ...props}) {
         ))}
         <h3 className={styles['prompt']}>{prompt[0].text}</h3>
         <div className={styles['cta-button']}>
-          <ButtonLink to={to.url} text={cta} />
+          <ButtonLink to={PrismicLinkURL(to)} text={cta} />
         </div>
       </div>
     </section>

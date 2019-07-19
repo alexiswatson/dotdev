@@ -11,7 +11,7 @@ function Button({children, ...props}) {
 
 function ButtonLink({text, to, ...props}) {
   return (
-    <Link to={to} className={styles['button']}>{text}</Link>
+    <a href={to} className={styles['button']}>{text}</a>
   )
 }
 

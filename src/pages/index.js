@@ -32,20 +32,25 @@ export const query = graphql`
               fields {
                 logo_set_logo_link {
                   ... on PRISMIC__ExternalLink {
+                    _linkType
                     url
                   }
                   ... on PRISMIC__ImageLink {
+                    _linkType
                     name
                     url
                     size
                   }
                   ... on PRISMIC__FileLink {
+                    _linkType
                     name
                     url
                     size
                   }
                   ... on PRISMIC_Page {
+                    _linkType
                     _meta {
+                      id
                       uid
                     }
                   }
@@ -62,24 +67,28 @@ export const query = graphql`
                 cta_prompt
                 cta_link_url {
                   ... on PRISMIC__ExternalLink {
+                    _linkType
                     url
                   }
                   ... on PRISMIC__ImageLink {
+                    _linkType
                     name
                     url
                     size
                   }
                   ... on PRISMIC__FileLink {
+                    _linkType
                     name
                     url
                     size
                   }
                   ... on PRISMIC_Page {
+                    _linkType
                     _meta {
+                      id
                       uid
                     }
                   }
-                  __typename
                   __typename
                 }
                 cta_link_text
@@ -103,9 +112,9 @@ export default class HomeContainer extends Component {
         const paragraphStrategy = (section) => (
           (section.type === 'paragraph') ? <ParagraphSection title={section.primary.paragraph_title} paragraphs={section.primary.paragraph_copy} /> : null
         );
-        const ctaStrategy = (section) => (
-          (section.type === 'cta') ? <CTASection title={section.primary.cta_title} hook={section.primary.cta_hook} prompt={section.primary.cta_prompt} cta={section.primary.cta_link_text} to={section.primary.cta_link_url} />  : null
-        );
+        const ctaStrategy = (section) => {
+          return ((section.type === 'cta') ? <CTASection title={section.primary.cta_title} hook={section.primary.cta_hook} prompt={section.primary.cta_prompt} cta={section.primary.cta_link_text} to={section.primary.cta_link_url} />  : null);
+        };
         const logosetStrategy = (section) => (
           (section.type === 'logo_set') ? <LogoSetSection logos={section.fields} /> : null
         );
