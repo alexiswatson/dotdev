@@ -1,17 +1,17 @@
 export default function LinkResolver(link) {
-  if (link.type === 'PRISMIC_Work') {
-    return `/works/${link._meta.uid}`;
+  if (link.__typename === 'PRISMIC_Work' || link.type === 'work') {
+    return `/works/${(link._meta) ? link._meta.uid : link.uid}`;
   }
-  else if (link.__typename === 'PRISMIC_Page') {
-    return `/${link._meta.uid}`;
+  else if (link.__typename === 'PRISMIC_Page' || link.type === 'page') {
+    return `/${(link._meta) ? link._meta.uid : link.uid}`;
   }
-  else if (link.type === 'PRISMIC_Home_page') {
+  else if (link.__typename === 'PRISMIC_Home_page' || link.type === 'home_page') {
     return `/`;
   }
-  else if (link.type === 'PRISMIC_Works_list') {
+  else if (link.__typename === 'PRISMIC_Works_list' || link.type === 'works_list') {
     return `/works`;
   }
   else {
-    return `/${link._meta.id}`;
+    return `/${(link._meta) ? link._meta.id : link.id}`;
   }
 };
