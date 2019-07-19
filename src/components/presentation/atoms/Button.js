@@ -1,6 +1,5 @@
 import React from 'react';
 import styles from './Button.module.css';
-import { Link } from 'gatsby';
 import cx from 'classnames';
 
 function Button({children, ...props}) {
