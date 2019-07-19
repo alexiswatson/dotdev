@@ -15,7 +15,7 @@
   padding: 2rem;
   background: #0a0a0a;
   text-align: center;
-  break-inside: avoid-column;
+  break-inside: avoid;
 }
 
 .works-link {
