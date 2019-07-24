@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Alexis Watson - Web Designer, Engineer, and Accessibility Professional`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
-    author: `@gatsbyjs`,
+    description: `Personal website for Alexis Watson, built using Gatsby, React, Prismic, and Netlify.`,
+    author: `@alexiswatson`,
   },
   plugins: [
     {
