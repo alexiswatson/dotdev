@@ -5,14 +5,6 @@ module.exports = {
     author: `@alexiswatson`,
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        typekit: {
-          id: 'nqa3iyl'
-        }
-      }
-    },
     `gatsby-plugin-react-helmet`,
     {
       resolve: `gatsby-source-filesystem`,
