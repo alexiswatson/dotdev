@@ -14,6 +14,7 @@
 .colophon-logo, .colophon-nav, .colophon-certs {
   justify-self: center;
   align-self: center;
+  text-align: center;
 }
 
 .colophon-logo {
@@ -36,6 +37,7 @@
 
   .colophon-logo {
     justify-self: start;
+    text-align: left;
   }
 
   .colophon-certs {
