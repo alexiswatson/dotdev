@@ -7,7 +7,6 @@ import SplitSection from '../organisms/SplitSection';
 export default function ImageParagraphSection({ title, copy, image, side = 'left' }) {
   const firstSide = (side === 'left') ? 'right' : 'left';
   const paragraph = (<div>
-    <Subhead>{title[0].text}</Subhead>
     {copy.map(p => (
       <Paragraph>{p.text}</Paragraph>
     ))}
@@ -17,6 +16,7 @@ export default function ImageParagraphSection({ title, copy, image, side = 'left
   const right = (side === 'left') ? paragraph : img;
   return (
     <SplitSection
+      title={title[0].text}
       first={firstSide}
       left={left}
       right={right}

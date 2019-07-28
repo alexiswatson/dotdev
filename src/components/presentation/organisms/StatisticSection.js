@@ -7,7 +7,6 @@ import SplitSection from '../organisms/SplitSection';
 export default function StatisticSection({ title, copy, label, value, style, side = 'left' }) {
   const firstSide = (side === 'left') ? 'right' : 'left';
   const paragraph = (<div>
-    <Subhead>{title[0].text}</Subhead>
     {copy.map(p => (
       <Paragraph>{p.text}</Paragraph>
     ))}
@@ -17,6 +16,7 @@ export default function StatisticSection({ title, copy, label, value, style, sid
   const right = (side === 'left') ? paragraph : statistic;
   return (
     <SplitSection
+      title={title[0].text}
       first={firstSide}
       left={left}
       right={right}

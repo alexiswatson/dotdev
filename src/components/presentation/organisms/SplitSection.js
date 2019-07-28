@@ -1,11 +1,15 @@
 import React from 'react';
+import Subhead from '../atoms/Subhead';
 import styles from './SplitSection.module.css';
 import cx from 'classnames';
 
-export default function SplitSection({left, right, first = 'left', ...props}) {
+export default function SplitSection({title, left, right, first = 'left', ...props}) {
 
   return (
     <div className={styles['section']} {...props}>
+      <div className={styles['title']}>
+        <Subhead>{title}</Subhead>
+      </div>
       <div className={cx(styles['left'], first !== 'right' && styles['first'])}>
         {left}
       </div>
