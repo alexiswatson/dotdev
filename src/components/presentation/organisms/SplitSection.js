@@ -7,9 +7,9 @@ export default function SplitSection({title, left, right, first = 'left', ...pro
 
   return (
     <div className={styles['section']} {...props}>
-      <div className={styles['title']}>
+      {title && (<div className={styles['title']}>
         <Subhead>{title}</Subhead>
-      </div>
+      </div>)}
       <div className={cx(styles['left'], first !== 'right' && styles['first'])}>
         {left}
       </div>
