@@ -1,3 +1,7 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+})
+
 module.exports = {
   siteMetadata: {
     title: `Alexis Watson - Web Designer, Engineer, and Accessibility Professional`,
@@ -17,6 +21,7 @@ module.exports = {
       resolve: `gatsby-source-prismic-graphql`,
       options: {
         repositoryName: 'alexiswatsondev',
+        accessToken: `${process.env.API_KEY}`,
       }
     },
     `gatsby-transformer-sharp`,
