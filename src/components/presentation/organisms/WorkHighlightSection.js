@@ -13,7 +13,7 @@ export default function WorkHighlightSection({title, org, image, date, hook, cop
       <div className={styles['hero']}>
         <Image src={image.url} alt={image.alt} />
       </div>
-     <div className={styles['details-grid']}>
+      <div className={styles['details-grid']}>
         <div className={styles['details-cell']}>
           <div className={styles['details-head']}>
             <Heading flushTop={true}>{title}</Heading>
