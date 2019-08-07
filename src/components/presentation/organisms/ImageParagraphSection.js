@@ -4,6 +4,8 @@ import Paragraph from '../atoms/Paragraph';
 import Image from '../atoms/Image';
 import SplitSection from '../organisms/SplitSection';
 
+// @TODO: Render copy as RichText
+// @TODO: Render title
 export default function ImageParagraphSection({ title, copy, image, side = 'left' }) {
   const firstSide = (side === 'left') ? 'right' : 'left';
   const paragraph = (<div>

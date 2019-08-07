@@ -5,11 +5,9 @@ import Logo from '../atoms/Logo';
 import Heading from '../atoms/Heading';
 import Subhead from '../atoms/Subhead';
 import Paragraph from '../atoms/Paragraph';
-import styles from './FullSection.module.css';
+import styles from './HomePageHeroSection.module.css';
 
-// @TODO: Rename to HomePageHeroSection
-
-export default function FullSection({photo, heading, subhead, logos, hook }) {
+export default function HomePageHeroSection({photo, heading, subhead, logos, hook }) {
   return (
     <section className={styles['full']}>
       <div className={styles['photo']}>

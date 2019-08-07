@@ -2,7 +2,8 @@ import React from 'react';
 import Work from '../molecules/Work';
 import styles from './WorksList.module.css';
 
-export default function WorksList({works, ...props}) {
+// @TODO: Factor out transformations
+export default function WorksList({works}) {
   return (
     <ul className={styles['works']}>
       {works.map(work => {

@@ -2,7 +2,7 @@ import React from 'react';
 import LogoSet from '../molecules/LogoSet';
 import Logo from '../atoms/Logo';
 
-export default function LogoSetSection({logos, ...props}) {
+export default function LogoSetSection({logos}) {
   return (
     <LogoSet>
       {logos.map(logo => (

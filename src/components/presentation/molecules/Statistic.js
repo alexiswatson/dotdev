@@ -5,6 +5,7 @@ import cx from 'classnames';
 
 import dateImg from '../../../../assets/images/statistic-date.svg';
 
+// @TODO: Resize date image as needed based on res
 export default function Statistic({type = false, figure, details, ...props}) {
   return (
     <figure className={cx(styles['statistic'], type && styles[type])}>

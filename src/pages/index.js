@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { graphql } from "gatsby"
-import FullSection from '../components/presentation/organisms/FullSection';
+import FullSection from '../components/presentation/organisms/HomePageHeroSection';
 import CTASection from '../components/presentation/organisms/CTASection';
 import ParagraphSection from '../components/presentation/organisms/ParagraphSection';
 import LogoSetSection from '../components/presentation/organisms/LogoSetSection';

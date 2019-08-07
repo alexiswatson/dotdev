@@ -3,7 +3,7 @@ import styles from './ImagePairSection.module.css';
 import cx from 'classnames';
 import Image from '../atoms/Image';
 
-export default function ImagePairSection({src, alt, side = 'left', children, ...props}) {
+export default function ImagePairSection({src, alt, side = 'left', children}) {
   const imageSide = (side === 'right') ? 'right' : false;
   const copySide = (side === 'right') ? false : 'right';
   return (

@@ -5,8 +5,6 @@ import Image from '../atoms/Image';
 import Subhead from '../atoms/Subhead';
 import styles from './WorkHighlightSection.module.css';
 
-
-
 export default function WorkHighlightSection({title, org, image, date, hook, copy, ...props}) {
   return (
     <header className={styles["section"]}>
@@ -25,7 +23,7 @@ export default function WorkHighlightSection({title, org, image, date, hook, cop
             <Paragraph>{copy}</Paragraph>
           </div>
         </div>
-    </div>
+      </div>
     </header>
   );
 }

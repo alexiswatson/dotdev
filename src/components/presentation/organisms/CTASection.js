@@ -4,6 +4,8 @@ import { ButtonLink } from '../atoms/Button';
 import Paragraph from '../atoms/Paragraph';
 import PrismicLinkURL from '../../../shared/js/PrismicLinkURL';
 
+// @TODO: Render title
+// @TODO: Render paragraphs with RichText
 export default function CTASection({title, hook, prompt, cta, to, ...props}) {
   return (
     <section className={styles['cta']}>

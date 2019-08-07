@@ -24,7 +24,6 @@ export default function Colophon(props) {
             </SocialNav>
           </div>
           <div className={styles['colophon-certs']}>
-            { /* @TODO: Fix align */ }
             <a href="https://www.accessibilityassociation.org/cpwacertification"><img className={styles['colophon-iaap-logo']} src={iaap_cpwa} alt="International Association of Accessibility Professionals, Certified Professional in Web Accessibility" /></a>
           </div>
        </footer>

@@ -5,8 +5,9 @@ import TextField from '../molecules/TextField';
 import TextAreaField from '../molecules/TextAreaField';
 import { SubmitButton } from '../atoms/Button';
 
+// @TODO: Decouple decomposition from layout.
+// @TODO: Factor strategies out.
 export default function NetlifyForm({title, copy, closing, name, method, fields, action = '#', ...props}) {
-  // @TODO: Factor strategies out.
   const textStrategy = (field) => (
     (field.type === 'text' || field.type === 'email') ? <TextField label={field.label} name={field.name} required={(field.required === 'true') ? true : false} /> : null
   );

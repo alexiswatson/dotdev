@@ -4,6 +4,8 @@ import Paragraph from '../atoms/Paragraph';
 import Statistic from '../molecules/Statistic';
 import SplitSection from '../organisms/SplitSection';
 
+// @TODO: Render copy via RichText instead of iterating.
+// @TODO: Title renderer.
 export default function StatisticSection({ title, copy, label, value, style, side = 'left' }) {
   const firstSide = (side === 'left') ? 'right' : 'left';
   const paragraph = (<div>

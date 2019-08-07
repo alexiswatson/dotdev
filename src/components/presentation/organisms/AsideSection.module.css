@@ -1,4 +1,0 @@
-.aside {
-  background: #222222;
-  composes: max-800 from '../../../shared/styles/typography.module.css';
-}
