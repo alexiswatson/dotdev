@@ -16,8 +16,7 @@
 
 .logo-item {
   box-sizing: border-box;
-  width: auto;
-  max-width: 20%;
+  width: 20%;
 }
 
 .logo-set.column {
