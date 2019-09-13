@@ -5,6 +5,7 @@ import CTASection from '../components/presentation/organisms/CTASection';
 import ParagraphSection from '../components/presentation/organisms/ParagraphSection';
 import LogoSetSection from '../components/presentation/organisms/LogoSetSection';
 import Page from '../components/presentation/templates/Page';
+import SEO from '../shared/js/components/SEO';
 
 export const query = graphql`
 {
@@ -126,6 +127,7 @@ export default class HomeContainer extends Component {
 
         return (
             <Page>
+                <SEO title={"I design and build websites."} />
                 <FullSection 
                   heading={title[0].text}
                   subhead={lede[0].text}

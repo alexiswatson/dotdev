@@ -5,8 +5,11 @@ require("dotenv").config({
 module.exports = {
   siteMetadata: {
     title: `Alexis Watson - Web Designer, Engineer, and Accessibility Professional`,
-    description: `Personal website for Alexis Watson, built using Gatsby, React, Prismic, and Netlify.`,
-    author: `@alexiswatson`,
+    description: `Alexis Watson is an award-winning full-stack lead web
+      engineer, published user experience designer, and Certified Professional
+      in Web Accessibility, who has been building websites for the past 14 years.`,
+    author: 'Alexis Watson',
+    twitterUsername: `@alexiswatsondev`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

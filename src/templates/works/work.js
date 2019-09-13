@@ -7,6 +7,7 @@ import ParagraphSection from '../../components/presentation/organisms/ParagraphS
 import StatisticSection from '../../components/presentation/organisms/StatisticSection';
 import ImageParagraphSection from '../../components/presentation/organisms/ImageParagraphSection';
 import Page from '../../components/presentation/templates/Page';
+import SEO from '../../shared/js/components/SEO';
 
 export const query = graphql`
   query WorkQuery($uid: String) {
@@ -124,6 +125,7 @@ export default class WorkContainer extends Component {
         }
         return (
             <Page>
+                <SEO title={`${title[0].text} Case Study`} />
                 <WorkHighlightSection 
                     title={title[0].text}
                     org={organization[0].text}
