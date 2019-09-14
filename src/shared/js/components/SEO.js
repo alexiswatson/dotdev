@@ -4,8 +4,7 @@ import Helmet from "react-helmet"
 import { useStaticQuery, graphql } from "gatsby"
 
 function SEO({ description, lang, meta, title }) {
-  console.log('Loaded SEO component.');
-  const { site } = useStaticQuery(
+  const query = useStaticQuery(
     graphql`
       query {
         site {
@@ -19,6 +18,7 @@ function SEO({ description, lang, meta, title }) {
     `
   );
 
+  const { site } = query;
   const metaDescription = description || site.siteMetadata.description;
 
   return (
