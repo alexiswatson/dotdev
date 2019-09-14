@@ -19,7 +19,7 @@ function SEO({ description, lang, meta, title }) {
   );
 
   const { site } = query;
-  const metaDescription = description || site.siteMetadata.description;
+  const metaDescription = description || 'Alexis Watson is an award-winning full-stack lead web engineer, published user experience designer, and Certified Professional in Web Accessibility, who has been building websites for the past 14 years.';
 
   return (
     <Helmet
