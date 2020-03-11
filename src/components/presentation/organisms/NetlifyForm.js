@@ -9,10 +9,10 @@ import { SubmitButton } from '../atoms/Button';
 // @TODO: Factor strategies out.
 export default function NetlifyForm({title, copy, closing, name, method, fields, action = '#', ...props}) {
   const textStrategy = (field) => (
-    (field.type === 'text' || field.type === 'email') ? <TextField label={field.label} name={field.name} required={(field.required === 'true') ? true : false} /> : null
+    (field.type === 'text' || field.type === 'email') ? <TextField label={field.label} name={field.name} id={field.name} required={(field.required === 'true') ? true : false} /> : null
   );
   const textareaStrategy = (field) => (
-    (field.type === 'textarea') ? <TextAreaField label={field.label} name={field.name} required={(field.required === 'true') ? true : false} /> : null
+    (field.type === 'textarea') ? <TextAreaField label={field.label} name={field.name} id={field.name} required={(field.required === 'true') ? true : false} /> : null
   );
   const submitStrategy = (field) => (
     (field.type === 'submit') ? <SubmitButton name={field.name} value={field.value} /> : null
