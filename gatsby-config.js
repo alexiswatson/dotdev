@@ -17,7 +17,7 @@ module.exports = {
       resolve: `gatsby-source-prismic-graphql`,
       options: {
         repositoryName: 'alexiswatsondev',
-        accessToken: `${process.env.API_KEY}`,
+        accessToken: `${process.env.PRISMIC_API_KEY}`,
       }
     },
     `gatsby-transformer-sharp`,
